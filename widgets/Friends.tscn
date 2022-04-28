@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://widgets/Friends.gd" type="Script" id=2]
+
+[node name="Friends" type="VBoxContainer"]
+margin_left = 200.0
+margin_top = 20.0
+margin_right = 388.0
+margin_bottom = 580.0
+script = ExtResource( 2 )
+
+[node name="FriendName" type="LineEdit" parent="."]
+margin_right = 188.0
+margin_bottom = 24.0
+align = 1
+placeholder_text = "Username"
+
+[node name="AddFriend" type="Button" parent="."]
+margin_top = 28.0
+margin_right = 188.0
+margin_bottom = 48.0
+text = "+"
+
+[connection signal="pressed" from="AddFriend" to="." method="_on_AddFriend_pressed"]
